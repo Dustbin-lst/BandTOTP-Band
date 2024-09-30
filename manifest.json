@@ -1,6 +1,6 @@
 {
   "package": "com.lst.bandtotp",
-  "name": "totp",
+  "name": "BandTOTP",
   "versionName": "1.0.0",
   "versionCode": 1,
   "minPlatformVersion": 1000,
@@ -11,11 +11,11 @@
   "features": [
     { "name": "system.interconnect" },
     { "name": "system.storage" },
-    { "name": "system.prompt" }
+    { "name": "system.prompt"}
   ],
   "config": {
     "logLevel": "log",
-    "designWidth": 480
+    "designWidth": 192
   },
   "router": {
     "entry": "pages/index",

@@ -19,7 +19,7 @@
         <text>剩余时间{{timelast}}S</text>
         <img src="/common/del.png"onclick="del()" style="position: absolute;left: 45px; top: 6px;"/>
     </div>
-    <progress style="position: absolute;left: 2px;bottom: 4px;center-y:0px;center-x:94px;width: 188px;height: 94px;radius:94px;start-angle:240deg;total-angle:-120deg;stroke-width:10px;background-color: rgba(255, 255, 255, 0.6);;color:white" percent="{{timeProgress}}" type="arc" if="{{list.length!=0}}"></progress> 
+    <progress style="position: absolute;left: 2px;bottom: 6px;center-y:0px;center-x:94px;width: 188px;height: 94px;radius:94px;start-angle:240deg;total-angle:-120deg;stroke-width:10px;background-color: rgba(255, 255, 255, 0.6);;color:white" percent="{{timeProgress}}" type="arc" if="{{list.length!=0}}"></progress> 
     <!-- 关于 -->
     <img src="/common/info.png"onclick="i()" style="position: absolute;left: 45px; top: 6px;"show="{{!ab&&!more_show}}"/>
     <scroll class="bg" show="{{ab}}" scroll-y="true" bounces="true">
@@ -151,7 +151,7 @@ export default {
             return
         }
         this.list.splice(nowi, 1);
-        this.more_show = false
+        delCount =this.more_show = false
         this.save()
         prompt.showToast({
             message: "删除成功"
