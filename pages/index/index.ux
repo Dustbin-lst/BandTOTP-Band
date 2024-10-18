@@ -3,7 +3,7 @@
     <!-- biaodan -->
     <list class="bg" style="left: 3px;width: 186px;padding-top:86px;padding-bottom:86px;" id="list">
       <list-item for="{{list}}"style="height: 110px;flex-wrap: wrap;background-color: #262626;margin-bottom:8px;border-radius: 27px;"type="aa" onclick="info({{$idx}})">
-        <text style="position: absolute;left:12px;top:12px;width:162px;height: 42px;text-align: left;">{{$item.name}}</text>
+        <text style="position: absolute;left:12px;top:12px;width:162px;height: 42px;text-align: left;lines: 1; text-overflow: ellipsis;">{{$item.name}}</text>
         <text style="position: absolute;left: 12px;top: 61px;width: 162px;font-size: 28px;color: #A8A8A8;text-align: left;">{{$item.otp}}</text>
       </list-item>
     </list>
@@ -14,9 +14,9 @@
     <!-- 详情 -->
     <div class="bg" style='justify-content: center;flex-wrap: wrap;flex-direction: column;align-content: center;'show="{{more_show}}">
         <text>{{more.name}}</text>
-        <text if="{{more.usr}}">{{more.usr}}</text>
+        <text if="{{more.usr}}"style="font-size: 20px;font-weight: normal;">{{more.usr}}</text>
         <text style="font-size: 40px;">{{more.otp}}</text>
-        <text>剩余时间{{timelast}}S</text>
+        <text style="font-size: 20px;">剩余时间{{timelast}}S</text>
         <img src="/common/del.png"onclick="del()" style="position: absolute;left: 45px; top: 6px;"/>
     </div>
     <progress style="position: absolute;left: 2px;bottom: 6px;center-y:0px;center-x:94px;width: 188px;height: 94px;radius:94px;start-angle:240deg;total-angle:-120deg;stroke-width:10px;background-color: rgba(255, 255, 255, 0.6);;color:white" percent="{{timeProgress}}" type="arc" if="{{list.length!=0}}"></progress> 
@@ -57,7 +57,7 @@ class key {
 export default {
     private: {
         ab: false,
-        list: [ /* new key("website","website",'account') */ ],
+        list: [/*  new key("website","website",'account')  */],
         more_show: false,
         more: null,
         timelast: 0,
