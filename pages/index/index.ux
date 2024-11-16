@@ -132,9 +132,9 @@ export default {
         var ms2NextSecond = 1000 - (Date.now() % 1000);
         setTimeout(() => keyInterval = setInterval(() => {
             var ttl = Math.floor(Date.now() / 1000 % 30);
-            //if (ttl === 0) {
+            if (ttl === 0) {
                 this.list.forEach((e) => e.upd())
-            //}
+            }
             this.timelast = 30 - ttl
         }, 1000), ms2NextSecond);
         timeInterval = setInterval(() => {
